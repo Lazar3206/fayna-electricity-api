@@ -7,11 +7,11 @@ namespace Electricity.Api.Controllers
     [Route("[controller]")]
     public class DashboardController : ControllerBase
     {
-        private readonly ILogger<ElectricitySwithRecordController> _logger;
+        private readonly ILogger<ElectricitySwitchRecordController> _logger;
         private readonly ElectricityDbContext electricityDbContext;
 
         public DashboardController(
-            ILogger<ElectricitySwithRecordController> logger,
+            ILogger<ElectricitySwitchRecordController> logger,
             ElectricityDbContext electricityDbContext)
         {
             _logger = logger;
@@ -21,7 +21,7 @@ namespace Electricity.Api.Controllers
         [HttpGet]
         public DashBoardResponse Get()
         {
-            Microsoft.EntityFrameworkCore.DbSet<Db.Entities.ElectricitySwitchRecord> res = electricityDbContext.ElectricitySwitchRecord;
+            Microsoft.EntityFrameworkCore.DbSet<Db.Entities.ElectricitySwitchRecord> res = electricityDbContext.ElectricitySwitchRecords;
             var lst = res.ToList();
             return new DashBoardResponse
             {

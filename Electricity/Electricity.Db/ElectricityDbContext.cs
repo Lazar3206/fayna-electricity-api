@@ -23,6 +23,6 @@ namespace Electricity.Db
         //{
         //}
 
-        public DbSet<ElectricitySwitchRecord> ElectricitySwitchRecord { get; set; }
+        public DbSet<ElectricitySwitchRecord> ElectricitySwitchRecords { get; set; }
     }
 }
