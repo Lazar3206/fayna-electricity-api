@@ -2,7 +2,7 @@
 
 namespace Electricity.Db.Entities
 {
-    public class ElectricitySwithRecord
+    public class ElectricitySwitchRecord
     {
         public int Id { get; set; }
         public Guid ElectricitySwithRecordKey { get; set; }

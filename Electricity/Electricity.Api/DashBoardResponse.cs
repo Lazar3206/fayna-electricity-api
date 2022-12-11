@@ -4,6 +4,6 @@ namespace Electricity.Api
 {
     public class DashBoardResponse
     {
-        public IEnumerable<ElectricitySwithRecord> ElectricitySwithRecords { get; set; }
+        public IEnumerable<ElectricitySwitchRecord> ElectricitySwithRecords { get; set; }
     }
 }

@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
+﻿using Electricity.Db;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Electricity.Api.Controllers
 {
@@ -8,16 +8,25 @@ namespace Electricity.Api.Controllers
     public class DashboardController : ControllerBase
     {
         private readonly ILogger<ElectricitySwithRecordController> _logger;
+        private readonly ElectricityDbContext electricityDbContext;
 
-        public DashboardController(ILogger<ElectricitySwithRecordController> logger)
+        public DashboardController(
+            ILogger<ElectricitySwithRecordController> logger,
+            ElectricityDbContext electricityDbContext)
         {
             _logger = logger;
+            this.electricityDbContext = electricityDbContext;
         }
 
         [HttpGet]
         public DashBoardResponse Get()
         {
-            return new DashBoardResponse(); 
+            Microsoft.EntityFrameworkCore.DbSet<Db.Entities.ElectricitySwitchRecord> res = electricityDbContext.ElectricitySwitchRecord;
+            var lst = res.ToList();
+            return new DashBoardResponse
+            {
+                ElectricitySwithRecords = res
+            };
         }
     }
 }
