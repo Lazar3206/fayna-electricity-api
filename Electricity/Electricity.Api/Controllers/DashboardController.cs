@@ -21,7 +21,7 @@ namespace Electricity.Api.Controllers
         [HttpGet]
         public DashBoardResponse Get()
         {
-            Microsoft.EntityFrameworkCore.DbSet<Db.Entities.ElectricitySwitchRecord> res = electricityDbContext.ElectricitySwitchRecords;
+            Microsoft.EntityFrameworkCore.DbSet<Db.Entities.ElectricitySwitchRecord> res = electricityDbContext.ElectricitySwitchRecord;
             var lst = res.ToList();
             return new DashBoardResponse
             {

@@ -12,6 +12,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ElectricityDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("ElectricityDbContext"))
     );
+// Add Cors
+builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+}));
 
 var app = builder.Build();
 
@@ -23,6 +30,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Enable Cors
+app.UseCors("MyPolicy");
 
 app.UseAuthorization();
 
