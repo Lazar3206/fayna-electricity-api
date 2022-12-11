@@ -1,4 +1,5 @@
 ﻿using Electricity.Db;
+using Electricity.Db.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Electricity.Api.Controllers
@@ -19,13 +20,13 @@ namespace Electricity.Api.Controllers
         }
 
         [HttpGet]
-        public DashBoardResponse Get()
+        public DashboardResponse Get()
         {
             Microsoft.EntityFrameworkCore.DbSet<Db.Entities.ElectricitySwitchRecord> res = electricityDbContext.ElectricitySwitchRecord;
             var lst = res.ToList();
-            return new DashBoardResponse
+            return new DashboardResponse
             {
-                ElectricitySwithRecords = res
+                ElectricitySwitchRecords = res.OrderBy(e => e.DateTime)
             };
         }
     }

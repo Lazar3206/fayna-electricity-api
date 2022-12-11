@@ -2,8 +2,8 @@ using Electricity.Db.Entities;
 
 namespace Electricity.Api
 {
-    public class DashBoardResponse
+    public class DashboardResponse
     {
-        public IEnumerable<ElectricitySwitchRecord> ElectricitySwithRecords { get; set; }
+        public IEnumerable<ElectricitySwitchRecord> ElectricitySwitchRecords { get; set; }
     }
 }
