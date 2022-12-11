@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Electricity.Api", "Electricity.Api\Electricity.Api.csproj", "{F1551D9E-ED83-414A-9AE7-8B09DFC45A18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Electricity.Db", "Electricity.Db\Electricity.Db.csproj", "{6BBA92FC-EF64-44C1-A521-86A072204E81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F1551D9E-ED83-414A-9AE7-8B09DFC45A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1551D9E-ED83-414A-9AE7-8B09DFC45A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1551D9E-ED83-414A-9AE7-8B09DFC45A18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BBA92FC-EF64-44C1-A521-86A072204E81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BBA92FC-EF64-44C1-A521-86A072204E81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BBA92FC-EF64-44C1-A521-86A072204E81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BBA92FC-EF64-44C1-A521-86A072204E81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
