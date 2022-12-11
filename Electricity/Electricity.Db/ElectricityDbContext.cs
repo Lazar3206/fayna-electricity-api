@@ -5,7 +5,11 @@ namespace Electricity.Db
 {
     public class ElectricityDbContext : DbContext
     {
-        public ElectricityDbContext(DbContextOptions options): base(options)
+        public ElectricityDbContext()
+        {
+
+        }
+        public ElectricityDbContext(DbContextOptions options) : base(options)
         {
 
         }
@@ -15,9 +19,10 @@ namespace Electricity.Db
             optionsBuilder.UseSqlServer(@"Data Source=localhost;Database=Electricity;Integrated Security=True;Trust Server Certificate=True");
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-        }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //}
+
         public DbSet<ElectricitySwitchRecord> ElectricitySwitchRecord { get; set; }
     }
 }
